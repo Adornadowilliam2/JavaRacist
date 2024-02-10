@@ -18,7 +18,7 @@ class Airplane {
         if(fuel > 1){
             this.fuel += fuel;
         }else{
-            System.out.println("ERROR: Engine not started, no fuel, or insufficient fuel to travel.");
+            System.out.println("ERROR: Fuel must have an input at least 1");
         }
     }
 

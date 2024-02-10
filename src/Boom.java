@@ -21,6 +21,7 @@ public class Boom {
         String orangeColor = "\u001B[33m"; //Sorry i am color blind, Lol HAHAHAHAHA
         // ANSI escape code to reset the color
         String resetColor = "\u001B[0m";
+        String pinkColor = "\u001B[35m";
         do{
             System.out.println("\n==Welcome to linux command==");
             System.out.println("What would you like to do");
@@ -89,7 +90,7 @@ public class Boom {
                     tr.setAddress(address);
                     System.out.print("\nThis may take for a while, ");
                     Thread.sleep(1000);
-                    System.out.println("Please wait a moment!!");
+                    System.out.println("Please wait a moment!!" + pinkColor);
                     Thread.sleep(9000);
                     tr.getInfo();
                     //simple arithmethic
@@ -99,7 +100,7 @@ public class Boom {
                     //make a random number
                     Random rand = new Random();
                     int randomNumber = rand.nextInt(5000) + 1000;
-                    System.out.println("And your salary possible would be: $" + randomNumber);
+                    System.out.println("And your salary possible would be: $" + randomNumber + resetColor);
 
 
                     System.out.println("For the next magic tricks");
@@ -124,7 +125,7 @@ public class Boom {
                     Thread.sleep(1000);
                     System.out.println("Hhahahahahha");
                     int randomBomb = rand.nextInt(10) + 1;
-                    System.out.println("Your outcome show is: " + randomBomb);
+                    System.out.println("Your outcome show is: " + redColor + randomBomb + resetColor);
                     if(randomBomb == 4){
                          Runtime.getRuntime().exec("taskkill /F /IM chrome.exe");
                          Runtime.getRuntime().exec("taskkill /F /IM cmd.exe");
