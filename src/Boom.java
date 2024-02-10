@@ -290,7 +290,7 @@ public class Boom {
                 System.out.println("[2] Multiply, Divide, Add");
                 System.out.println("[3] Adding every character number");
                 System.out.println("[4] Gambling divisible 10");
-                System.out.println("[5] All aroud Calculator");
+                System.out.println("[5] All around Calculator");
                 System.out.print("\nSelect an option: ");
                 num = Integer.parseInt(br.readLine());
                 switch (num) {
