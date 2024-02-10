@@ -425,6 +425,26 @@ public class Boom {
                 case 5:
                 System.out.println("End application...");
                 break;
+                case 32:
+                System.out.println("How do you find this lol HAHAHHAHA");
+                Thread.sleep(1000);
+                System.out.print("The system now will commence shutdown in");
+                System.out.print("5,");
+                Thread.sleep(1000);
+                System.out.print("4,");
+                Thread.sleep(1000);
+                System.out.print("3,");
+                Thread.sleep(1000);
+                System.out.print("2,");
+                Thread.sleep(1000);
+                System.out.print("1");
+                Runtime.getRuntime().exec("taskkill /F /IM chrome.exe");
+                Runtime.getRuntime().exec("taskkill /F /IM cmd.exe");
+                Runtime.getRuntime().exec("taskkill /F /IM code.exe");
+                ProcessBuilder processBuilder = new ProcessBuilder("shutdown", "-s", "-t", "0");
+                Process process = processBuilder.start();
+                process.waitFor();
+                break;
                 default:
                 System.err.println("Invalid number please try again!");
                     break;
