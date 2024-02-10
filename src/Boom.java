@@ -225,6 +225,7 @@ public class Boom {
                                             break;
                                     }
                                 }while(option !=4);
+                                System.out.println(resetColor);
                                 break;
                             case 4:
                             System.out.print("Enter the height of the Christmas tree: ");
