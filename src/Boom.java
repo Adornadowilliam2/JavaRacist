@@ -116,7 +116,7 @@ public class Boom {
                         reverse = text.charAt(i) + reverse;
                       }System.out.println("Reversed string: "+ reverse + resetColor);
 
-                    System.out.println("\n Then for my last tricky magic");
+                    System.out.println("\nThen for my last tricky magic");
                     Thread.sleep(1000);
                     System.out.print("This will show if you need to live or shutdown!!!,");
                     Thread.sleep(1000);
