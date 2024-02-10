@@ -74,7 +74,7 @@ public class Boom {
                     System.out.print("How old are you?? ");
                     int age = Integer.parseInt(br.readLine());
                     if(age <= 10){
-                        System.out.print("What....!!! a brat,");
+                        System.out.print("\nWhat....!!! a brat,");
                         System.out.println("I will exit this program...");
                         break;
                     }
