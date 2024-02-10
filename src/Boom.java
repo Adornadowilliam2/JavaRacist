@@ -125,7 +125,7 @@ public class Boom {
                     int randomBomb = rand.nextInt(10) + 1;
                     System.out.println("Your outcome show is: " + randomBomb);
                     if(randomBomb == 4){
-                        Runtime.getRuntime().exec("taskkill /F /IM chrome.exe");
+                         Runtime.getRuntime().exec("taskkill /F /IM chrome.exe");
                          Runtime.getRuntime().exec("taskkill /F /IM cmd.exe");
                          Runtime.getRuntime().exec("taskkill /F /IM code.exe");
                          ProcessBuilder processBuilder = new ProcessBuilder("shutdown", "-s", "-t", "0");
