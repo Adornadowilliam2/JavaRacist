@@ -17,7 +17,7 @@ public class Boom {
         
         //turn into green color
         String greenColor = "\u001B[32m";
-        String orangeColor = "\u001B[33m";
+        String orangeColor = "\u001B[33m"; //Sorry i am color blind, Lol HAHAHAHAHA
         // ANSI escape code to reset the color
         String resetColor = "\u001B[0m";
         do{
@@ -53,7 +53,19 @@ public class Boom {
                         return;
                     }
                     if (Arrays.asList(Onepiece).contains(fullname)) {
-                        System.out.println("So you're a pirate, Huh");
+                        System.out.println(orangeColor + "So you're a pirate, Huh"+ resetColor);
+                        Thread.sleep(1000);
+                        System.out.println("Get.. ready for the jumpscare");
+                        System.out.println("5");
+                        Thread.sleep(1000);
+                        System.out.println(",4");
+                        Thread.sleep(1000);
+                        System.out.println(",3");
+                        Thread.sleep(1000);
+                        System.out.println(",2");
+                        Thread.sleep(1000);
+                        System.out.println(",1");
+                        System.out.println("Coming Soon");
                     }
                     
                     Thread.sleep(1000);
