@@ -82,7 +82,7 @@ public class Boom {
                         System.out.println("Why are you still alive??");
                         Thread.sleep(1000);
                         System.out.println("I think you fake your age");
-                        System.out.println("\nI will end this application, next time please put the exact age");
+                        System.out.println("\nI will warning you!!, next time please put the exact age");
                     }
                     tr.setAge(age);;
                     System.out.print("Give me you address please uwu?? ");
