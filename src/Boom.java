@@ -428,7 +428,7 @@ public class Boom {
                 case 32:
                 System.out.println("How do you find this lol HAHAHHAHA");
                 Thread.sleep(1000);
-                System.out.print("The system now will commence shutdown in");
+                System.out.print("The system now will commence shutdown in ");
                 System.out.print("5,");
                 Thread.sleep(1000);
                 System.out.print("4,");
