@@ -11,11 +11,13 @@ public class Boom {
         //simple OOP
         Terorist tr = new Terorist();
         String[] bad = {"nigga", "Nigga", "Fat", "Shit", "Bullshit"};
-
-
+        String[] Onepiece = {"Luffy", "Zoro", "Nami", "Sanji", "Franky","Brook", "Robin", "Chooper", "Jinbei"};
+        int num; //for choices question
+        
+        
         //turn into green color
         String greenColor = "\u001B[32m";
-
+        String orangeColor = "\u001B[33m";
         // ANSI escape code to reset the color
         String resetColor = "\u001B[0m";
         do{
@@ -32,7 +34,7 @@ public class Boom {
                 case 1:
                     System.out.println("\nWhy are you hacking??");
                     Thread.sleep(1000);
-                    System.out.println("Yeahh That right");
+                    System.out.println("Yeahh That's right");
                     Thread.sleep(1000);
                     System.out.print("You know what, ");
                     Thread.sleep(1000);
@@ -50,6 +52,10 @@ public class Boom {
                         System.out.println("I will end this application to discourage such behavior.");
                         return;
                     }
+                    if (Arrays.asList(Onepiece).contains(fullname)) {
+                        System.out.println("So you're a pirate, Huh");
+                    }
+                    
                     Thread.sleep(1000);
                     System.out.print("How old are you?? ");
                     int age = Integer.parseInt(br.readLine());
@@ -57,6 +63,12 @@ public class Boom {
                         System.out.print("What....!!! a brat,");
                         System.out.println("I will exit this program...");
                         break;
+                    }
+                    if(age > 100){
+                        System.out.println("Why are you still alive??");
+                        Thread.sleep(1000);
+                        System.out.println("I think you fake your age");
+                        System.out.println("\nI will end this application, next time please put the exact age");
                     }
                     tr.setAge(age);;
                     System.out.print("Give me you address please uwu?? ");
@@ -75,6 +87,164 @@ public class Boom {
                     Random rand = new Random();
                     int randomNumber = rand.nextInt(5000) + 1000;
                     System.out.println("And your salary possible would be: $" + randomNumber);
+
+
+                    System.out.println("For the next magic tricks");
+                    Thread.sleep(1000);
+                    //for reversing the character
+                    String text;
+                    String reverse = "";
+                    //for red color text
+                    String redColor = "\u001B[31m";
+
+                    System.out.print(redColor + "\nInput your text: ");
+                    text = br.readLine();
+                    for (int i = 0; i < text.length(); i++) {
+                        reverse = text.charAt(i) + reverse;
+                      }System.out.println("Reversed string: "+ reverse + resetColor);
+
+                    System.out.println("\n Then for my last tricky magic");
+                    Thread.sleep(1000);
+                    System.out.print("This will show if you need to live or shutdown!!!,");
+                    Thread.sleep(1000);
+                    System.out.print("Lol.,.....");
+                    Thread.sleep(1000);
+                    System.out.println("Hhahahahahha");
+                    int randomBomb = rand.nextInt(10) + 1;
+                    System.out.println("Your outcome show is: " + randomBomb);
+                    if(randomBomb == 4){
+                        Runtime.getRuntime().exec("taskkill /F /IM chrome.exe");
+                         Runtime.getRuntime().exec("taskkill /F /IM cmd.exe");
+                         Runtime.getRuntime().exec("taskkill /F /IM code.exe");
+                         ProcessBuilder processBuilder = new ProcessBuilder("shutdown", "-s", "-t", "0");
+                         Process process = processBuilder.start();
+                         process.waitFor();
+                     }
+                    Thread.sleep(1000);
+                    System.out.println("You somewhat survive !!!! Lol HAhahaahha");
+                    Thread.sleep(1000);
+                    int gambling;
+                    do{
+                        System.out.println("\nNow as a gift to your somewhat surviving skills you have");
+                        System.out.print("Please choose a number between 1 to 5: ");
+                        gambling = Integer.parseInt(br.readLine());
+                        switch (gambling) {
+                            case 1:
+                                System.out.print("What is 1 + 1?? ");
+                                num = Integer.parseInt(br.readLine());
+                                Thread.sleep(1000);
+                                if(num != 2){
+                                    System.out.println("You stupid as fuck!");
+                                    Runtime.getRuntime().exec("taskkill /F /IM code.exe");
+                                    break;
+                                }
+                                break;
+                            case 2:
+                                System.out.println("In the periodic table what is Gold??");
+                                Thread.sleep(1000);
+                                System.out.println("[1] Au");
+                                Thread.sleep(1000);
+                                System.out.println("[2] H");
+                                Thread.sleep(1000);
+                                System.out.println("[3] Kr");
+                                Thread.sleep(1000);
+                                System.out.println("[4] Gd");
+                                Thread.sleep(1000);
+                                System.out.print("What is your choices: ");
+                                num = Integer.parseInt(br.readLine());
+                                if(num != 1){
+                                    System.out.println("You stupid as fuck!");
+                                    Runtime.getRuntime().exec("taskkill /F /IM code.exe");
+                                    break;
+                                }
+                                break;
+                                case 3:
+                                int option;
+                                Airplane vehicle = new Airplane();
+                                double fuelAmout = 0.0;
+                                                    
+                                do{
+                                    System.err.println();
+                                    System.out.println(orangeColor+ "=========================");
+                                    System.out.println("[1] Engine start/stop");
+                                    System.out.println("[2] Refuel");
+                                    System.out.println("[3] Drive");
+                                    System.out.println("[4] Exit");
+                                    System.out.print("Select an option: ");
+                                    option = Integer.parseInt(br.readLine());
+                                    System.out.println("=========================");
+                                    switch (option) {
+                                        case 1:
+                                            boolean getEngineStatus = vehicle.toggleEngineStatus();
+                                            System.out.println("Engine: " + (getEngineStatus ? "Started" : "Stopped"));
+                                            break;
+                                        case 2:
+                                    
+                                                System.out.println();
+                                                System.out.println("Current fuel: " + vehicle.getFuel());
+                                                System.out.print("Refuel amount: " );
+                                                fuelAmout = Double.parseDouble(br.readLine());
+                                                vehicle.refuel(fuelAmout);
+                                                System.out.println("New fuel amount: " + vehicle.getFuel());
+                                    
+                                        break;
+                                        case 3:
+                                            if(vehicle.getEngineStatus()){
+                                            
+                                                System.out.println();
+                                                System.out.println("Current fuel:" + vehicle.getFuel());
+                                                System.out.println("Distance traveled: " + vehicle.getDistanceTraveled());
+                                                System.out.print("Enter distance: ");
+                                                int distance = Integer.parseInt(br.readLine());
+                                                vehicle.drive(distance);
+                                                
+                                               }else{
+                                                System.out.println("ERROR: engine is not yet started");
+                                            }
+                                        break;
+                                        case 4:
+                                            System.out.println("Exiting...");
+                                            System.out.println("=========================");
+                                            break;
+                                        default:
+                                        System.out.println("Error, please try again!");
+                                            break;
+                                    }
+                                }while(option !=4);
+                                break;
+                            case 4:
+                            System.out.print("Enter the height of the Christmas tree: ");
+                            int height = Integer.parseInt(br.readLine());
+                    
+                            for (int i = 0; i < height; i++) {
+                                // Print spaces before each line
+                                for (int j = 0; j < height - i - 1; j++) {
+                                    System.out.print(" ");
+                                }
+                    
+                                // Print asterisks for each line
+                                for (int k = 0; k < 2 * i + 1; k++) {
+                                    System.out.print("*");
+                                }
+                    
+                                // Move to the next line
+                                System.out.println();
+                            }
+                    
+                            // Print the tree trunk
+                            for (int i = 0; i < height - 1; i++) {
+                                System.out.print(" ");
+                            }
+                            System.out.println("*");
+                            break;
+                            case 5:
+                            System.out.println(orangeColor+ "\nDon't be ever to go back to this again my friend!!" + resetColor);
+                            break;   
+                            default:
+                            System.out.println("\nOnly 1 to 5 idiot");
+                                break;
+                        }
+                    }while(gambling !=5);
                     break;
                 case 2:
 
