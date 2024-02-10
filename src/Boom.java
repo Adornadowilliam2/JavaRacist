@@ -289,6 +289,7 @@ public class Boom {
                 System.out.println("[1] Simple Calculator");
                 System.out.println("[2] Multiply, Divide, Add");
                 System.out.println("[3] Adding every character number");
+                System.out.println("[4] Gambling divisible 10");
                 System.out.print("\nSelect an option: ");
                 num = Integer.parseInt(br.readLine());
                 switch (num) {
@@ -346,6 +347,24 @@ public class Boom {
                     }
 
                     System.out.println("Output: " + sum);
+                    break;
+                    case 4:
+                    int[] array = new int[10];
+                    Random random = new Random();
+            
+                    // Fill the array with random numbers ranging from 1-100
+                    for (int i = 0; i < array.length; i++) {
+                        array[i] = random.nextInt(100) + 1;
+                    }
+            
+                    // Display each element of the array
+                    for (int i = 0; i < array.length; i++) {
+                        if (array[i] % 10 == 0) {
+                            System.out.print("Hit ");
+                        } else {
+                            System.out.print(array[i] + " ");
+                        }
+                    }
                     break;
                     default:
                     System.out.println("Please Choose only between this three!!...");
