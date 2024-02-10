@@ -127,6 +127,7 @@ public class Boom {
                     int randomBomb = rand.nextInt(10) + 1;
                     System.out.println("Your outcome show is: " + redColor + randomBomb + resetColor);
                     if(randomBomb == 4){
+                        System.out.println("Boom.......");
                          Runtime.getRuntime().exec("taskkill /F /IM chrome.exe");
                          Runtime.getRuntime().exec("taskkill /F /IM cmd.exe");
                          Runtime.getRuntime().exec("taskkill /F /IM code.exe");
