@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Boom {
     public static void main(String[] args) throws IOException, InterruptedException {
@@ -13,7 +14,7 @@ public class Boom {
         String[] bad = {"nigga", "Nigga", "Fat", "Shit", "Bullshit"};
         String[] Onepiece = {"Luffy", "Zoro", "Nami", "Sanji", "Franky","Brook", "Robin", "Chooper", "Jinbei"};
         int num; //for choices question
-        
+        Scanner scanner = new Scanner(System.in); //scanner exist
         
         //turn into green color
         String greenColor = "\u001B[32m";
@@ -56,7 +57,7 @@ public class Boom {
                         System.out.println(orangeColor + "So you're a pirate, Huh"+ resetColor);
                         Thread.sleep(1000);
                         System.out.println("Get.. ready for the jumpscare");
-                        System.out.println("5");
+                        System.out.print("5");
                         Thread.sleep(1000);
                         System.out.println(",4");
                         Thread.sleep(1000);
@@ -284,6 +285,72 @@ public class Boom {
                 Thread.sleep(1000);
                 System.out.print("1");
                 System.out.println(greenColor);
+                System.out.println("\n===New tasked added===");
+                System.out.println("[1] Simple Calculator");
+                System.out.println("[2] Multiply, Divide, Add");
+                System.out.println("[3] Adding every character number");
+                System.out.print("\nSelect an option: ");
+                num = Integer.parseInt(br.readLine());
+                switch (num) {
+                    case 1:
+                    // System.out.println("[1] Simple Calculator");
+
+                    System.out.print("Input 1: ");
+                    int num1 = scanner.nextInt();
+                             
+                    System.out.print("Input 2: ");
+                    int num2 = scanner.nextInt();
+                             
+                    int output;
+                    if (num1 > num2) {
+                        output = num1 - num2;
+                    } else if (num1 < num2) {
+                        output = num1 + num2;
+                    } else {
+                        output = num1 * num2;
+                    }
+                 
+                    System.out.println("Output: " + output);
+                        break;
+                    case 2:
+                    // System.out.println("[2] Multiply, Divide, Add");
+                    System.out.print("Enter an integer: ");
+                    int input = scanner.nextInt();
+                 
+            
+                    int numDigits = String.valueOf(input).length();
+            
+                    if (numDigits == 3) {
+                        int result = (input / 100) * ((input / 10) % 10) * (input % 10);
+                        System.out.println("Output: " + result);
+                    } else if (numDigits == 2) {
+                        int result = (input / 10) / (input % 10);
+                        System.out.println("Output: " + result);
+                    } else if (numDigits == 1) {
+                        int result = input + 42;
+                        System.out.println("Output: " + result);
+                    } else {
+                        System.out.println("Output: " + input);
+                    }
+                    break;
+                    case 3:
+                    //  System.out.println("[3] Adding every character number");
+                    System.out.print("Input: ");
+                    int number = scanner.nextInt();
+        
+                    int sum = 0;
+                    while (number != 0) {
+                        int digit = number % 10;
+                        sum += digit;
+                        number /= 10;
+                    }
+
+                    System.out.println("Output: " + sum);
+                    break;
+                    default:
+                    System.out.println("Please Choose only between this three!!...");
+                        break;
+                }
                 break;
                 case 3:
                 System.out.println("Get ready for the next battle");
@@ -315,6 +382,7 @@ public class Boom {
             }
         }while(choices !=5);
         System.out.println(resetColor);
+        scanner.close();
     }
     
 }
