@@ -59,14 +59,14 @@ public class Boom {
                         System.out.println("Get.. ready for the jumpscare");
                         System.out.print("5");
                         Thread.sleep(1000);
-                        System.out.println(",4");
+                        System.out.print(",4");
                         Thread.sleep(1000);
-                        System.out.println(",3");
+                        System.out.print(",3");
                         Thread.sleep(1000);
-                        System.out.println(",2");
+                        System.out.print(",2");
                         Thread.sleep(1000);
-                        System.out.println(",1");
-                        System.out.println("Coming Soon");
+                        System.out.print(",1");
+                        System.out.println("\nComing Soon");
                     }
                     
                     Thread.sleep(1000);
@@ -290,6 +290,7 @@ public class Boom {
                 System.out.println("[2] Multiply, Divide, Add");
                 System.out.println("[3] Adding every character number");
                 System.out.println("[4] Gambling divisible 10");
+                System.out.println("[5] All aroud Calculator");
                 System.out.print("\nSelect an option: ");
                 num = Integer.parseInt(br.readLine());
                 switch (num) {
@@ -349,6 +350,7 @@ public class Boom {
                     System.out.println("Output: " + sum);
                     break;
                     case 4:
+                    // System.out.println("[4] Gambling divisible 10");
                     int[] array = new int[10];
                     Random random = new Random();
             
@@ -365,6 +367,31 @@ public class Boom {
                             System.out.print(array[i] + " ");
                         }
                     }
+                    break;
+                    case 5:
+                    //    System.out.println("[5] All aroud Calculator");
+                    int difference, quotient, product;
+            
+                    System.out.print("Enter 1st Integer: ");
+                    num1 = scanner.nextInt();
+            
+                    System.out.print("Enter 2nd Integer: ");
+                    num2 = scanner.nextInt();
+            
+                    sum = num1 + num2;
+                    difference = num1 - num2;
+                    quotient = num1 / num2;
+                    product = num1 * num2;
+            
+                    System.out.println("Sum: " + sum);
+                    System.out.println("Difference: " + difference);
+                    System.out.println("Quotient: " + quotient);
+                    System.out.println("Product: " + product);
+            
+                    System.out.println("\n----------------------------");
+                    scanner.nextLine(); // Clear the input buffer
+                    System.out.println("Press Enter to exit...");
+                    scanner.nextLine();
                     break;
                     default:
                     System.out.println("Please Choose only between this three!!...");
