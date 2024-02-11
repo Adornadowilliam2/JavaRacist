@@ -397,7 +397,7 @@ public class Boom {
                     scanner.nextLine();
                     break;
                     default:
-                    System.out.println("Please Choose only between this three!!...");
+                    System.out.println("Incorrect nuumbe please try again!");
                         break;
                 }
                 break;
