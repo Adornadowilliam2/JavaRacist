@@ -397,7 +397,7 @@ public class Boom {
                     scanner.nextLine();
                     break;
                     default:
-                    System.out.println("Incorrect nuumbe please try again!");
+                    System.out.println("Incorrect number,. please try again!");
                         break;
                 }
                 break;
