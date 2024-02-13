@@ -22,6 +22,7 @@ public class Boom {
         // ANSI escape code to reset the color
         String resetColor = "\u001B[0m";
         String pinkColor = "\u001B[35m";
+        //Russian roulette is real
         do{
             System.out.println("\n==Welcome to linux command==");
             System.out.println("What would you like to do");
