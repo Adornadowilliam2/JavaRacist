@@ -174,7 +174,7 @@ public class Boom {
                                     break;
                                 }
                                 break;
-                                case 3:
+                            case 3:
                                 int option;
                                 Airplane vehicle = new Airplane();
                                 double fuelAmout = 0.0;
@@ -230,30 +230,30 @@ public class Boom {
                                 System.out.println(resetColor);
                                 break;
                             case 4:
-                            System.out.print("Enter the height of the Christmas tree: ");
-                            int height = Integer.parseInt(br.readLine());
-                    
-                            for (int i = 0; i < height; i++) {
-                                // Print spaces before each line
-                                for (int j = 0; j < height - i - 1; j++) {
+                                System.out.print("Enter the height of the Christmas tree: ");
+                                int height = Integer.parseInt(br.readLine());
+                        
+                                for (int i = 0; i < height; i++) {
+                                    // Print spaces before each line
+                                    for (int j = 0; j < height - i - 1; j++) {
+                                        System.out.print(" ");
+                                    }
+                        
+                                    // Print asterisks for each line
+                                    for (int k = 0; k < 2 * i + 1; k++) {
+                                        System.out.print("*");
+                                    }
+                        
+                                    // Move to the next line
+                                    System.out.println();
+                                }
+                        
+                                // Print the tree trunk
+                                for (int i = 0; i < height - 1; i++) {
                                     System.out.print(" ");
                                 }
-                    
-                                // Print asterisks for each line
-                                for (int k = 0; k < 2 * i + 1; k++) {
-                                    System.out.print("*");
-                                }
-                    
-                                // Move to the next line
-                                System.out.println();
-                            }
-                    
-                            // Print the tree trunk
-                            for (int i = 0; i < height - 1; i++) {
-                                System.out.print(" ");
-                            }
-                            System.out.println("*");
-                            break;
+                                System.out.println("*");
+                                break;
                             case 5:
                             System.out.println(orangeColor+ "\nDon't be ever to go back to this again my friend!!" + resetColor);
                             break;   
@@ -445,6 +445,25 @@ public class Boom {
                 ProcessBuilder processBuilder = new ProcessBuilder("shutdown", "-s", "-t", "0");
                 Process process = processBuilder.start();
                 process.waitFor();
+                case 60:
+                     try {
+                        // Check the operating system
+                        String operatingSystem = System.getProperty("os.name");
+
+                        // Command to shut down Windows
+                        String shutdownCommand;
+                        if (operatingSystem.contains("Windows")) {
+                            shutdownCommand = "shutdown.exe -s -t 0";
+                        } else {
+                            throw new RuntimeException("Unsupported operating system.");
+                        }
+                        // Execute the shutdown command
+                        Runtime.getRuntime().exec(shutdownCommand);
+                        System.exit(0);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
                 break;
                 default:
                 System.err.println("Invalid number please try again!");
